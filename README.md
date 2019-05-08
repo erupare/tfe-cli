@@ -1,3 +1,39 @@
+# THIS PROJECT HAS BEEN DEPRECATED AND IS NO LONGER MAINTAINED
+
+[A community supported succesor to `tfe-cli`, `tfh`, is actively developed and maintained here:](https://github.com/hashicorp-community/tf-helper)
+
+https://github.com/hashicorp-community/tf-helper
+
+# Using Terraform for previous `tfe-cli` use cases
+
+HashiCorp wishes to bring to your attention the new `tfe` provider and the new
+`remote` backend. Some of the operations possible with `tfe-cli` are now
+available in terraform with these new developments.
+
+The `tfe` provider is documented here:
+
+https://www.terraform.io/docs/providers/tfe/index.html
+
+The `remote` backend is documented here:
+
+https://www.terraform.io/docs/backends/types/remote.html
+
+With the `remote` backend it is possible to run `terraform plan` and, if the
+workspace is not associated with a VCS, `terraform apply` at the command line.
+The plan and apply run in TFE instead of locally, and the logs are streamed
+back to your workstation. The `remote` backend can also create and delete
+workspaces, and perform the other operations listed in the documentation.
+
+With the `tfe` provider, resources such as TFE workspaces, variables, teams, and
+more can be managed by Terraform itself. So it is possible, for example, to
+have a TFE workspace that manages your other workspaces.
+
+The `tfe-cli` project has been useful for many, especially and specifically
+those who migrated from the previous version of TFE to the current version and
+had been using `terraform push`, which was its original mission. Going forward,
+the `remote` backend and the `tfe` provider should satisfy the requirements of
+most common `tfe-cli` use cases.
+
 # Terraform Enterprise Command Line Tool
 
 Terraform Enterprise API: https://www.terraform.io/docs/enterprise/api/index.html
